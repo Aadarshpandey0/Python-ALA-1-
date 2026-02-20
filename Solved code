@@ -1,0 +1,21 @@
+print("Student Grade System")
+students = int(input("Enter number of students: "))
+i = 0
+total_marks = 0
+pass_count = 0
+while i < students:
+    marks = int(input("Enter marks: "))
+    total_marks = total_marks + marks
+    if marks >= 40:
+        pass_count = pass_count + 1
+        print("Pass")
+    else:
+        print("Fail")
+    i = i + 1
+average = total_marks / students
+print("Average:", average)
+print("Pass count:", pass_count)
+if average >= 75:
+    print("Excellent class")
+else:
+    print("Average class")
