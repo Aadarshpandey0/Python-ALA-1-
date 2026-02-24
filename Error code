@@ -3,18 +3,25 @@ students = int(input("Enter number of students: "))
 i = 0
 total_marks = 0
 pass_count = 0
+
 while i < students:
     marks = int(input("Enter marks: "))
     total_marks = total_marks + marks
+
     if marks >= 40:
         pass_count = pass_count + 1
         print("Pass")
-    else
+
+    else  			   	 # ❌ Error 1: Missing colon (:)
         print("Fail")
-        i = i + 1
+        i = i + 1 			  	# ❌ Error 2: Inside else → may cause infinite loop
+
 average = total_marks / students
+
 print("Average:", average)
-print("Pass count:", pass_count
+
+print("Pass count:", pass_count   	# ❌ Error 3: Missing closing parenthesis )
+
 if average >= 75:
     print("Excellent class")
 else:
